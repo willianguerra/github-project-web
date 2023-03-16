@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+<div align='center'>
+ 
+![Magazord](image/logo-magazord.png)
+ 
+ </div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Teste para vaga de front-end no Magazord.com.br
+Este repositório tem como fim testar os candidatos para vaga de front-end developer na empresa [Magazord](https://magazord.com.br).
+> Para esta vaga buscamos alguém apaixonado por HTML, CSS, JavaScript e atento aos detalhes!
 
-## Available Scripts
 
-In the project directory, you can run:
+## Instruções Básicas
+1. Faça um fork deste repositório
+2. Implemente o HTML e CSS de forma que fique fiel ao layout
+3. Atenção com espaçamentos e tamanhos de fonte
+4. Qualquer contribuição para melhorar o resultado será bem vinda!
+5. O usuário do GitHub utilizado no exemplo pode ser qualquer um de sua escolha
+6. Ao finalizar, atualize o README.md no seu repositório com as instruções para instalar e executar sua entrega
 
-### `yarn start`
+## Desafio (opcional, porém será um bônus), a página deve:
+1. Carregar os dados de forma dinâmica utilizando a [API do GitHub](https://developer.github.com/v3/)
+2. Carregar os repositórios do usuário inicialmente
+3. Carregar os favoritos do usuário ao acessar a tab **Starred**
+4. Fazer uma busca ao digitar e fazer o submit com "Enter"
+5. Ao clicar em um repositório trazer as informações deles, como acontece nesse [neste exemplo](https://github-explorer.gabrielcordeiro.dev/repository/facebook/react)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## O que esperamos no teste para a vaga de front-end
+* HTML Semântico
+* CSS de fácil leitura e reutilização
+* Uso de pré-processadores CSS como Sass, Less ou Stylus
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## O que esperamos no teste para a vaga de React
+* Typescript
+* HTML Semântico
+* Usar styled-components ou qualquer outra lib similar
+* Boa estruturação de pastas e componentes sendo possível a reutilização dos mesmos
 
-### `yarn test`
+## Stack
+### Preferível
+* Utilizar Sass como pré-processador
+* Mobile First
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Material
+Todo o layout está hospedado no Figma neste link: 
+https://www.figma.com/file/sf1CmqcEZbUzkeZOA4AUGj/TESTE-FRONT-MAGAZORD?node-id=0%3A1
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Envio do teste
+* Suba o repositório no seu Github e envie o link diretamente para o seu recrutador. Obs.: Não serão aceitos alterações após o envio
