@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { Repositories } from '../../@types/User'
 import { Icon, Text } from '../../styles/globalStyles'
 import {
@@ -13,8 +14,10 @@ interface CardProps {
 }
 
 export function Card({ repos, type }: CardProps) {
+
+  
   return (
-    <CardContainer key={repos.id}>
+    <CardContainer key={repos.id} onClick={() => window.open(repos.html_url, '_blank')}>
       <NameProjectContent>
         <Text size={18} weight={300}>
           {repos.full_name.split('/')[0]}
