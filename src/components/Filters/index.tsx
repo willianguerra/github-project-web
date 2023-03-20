@@ -1,7 +1,9 @@
-import { FilterButton } from '../../styles/globalStyles'
+import { FilterButton, Text } from '../../styles/globalStyles'
 import * as Popover from '@radix-ui/react-popover'
-import { MdKeyboardArrowDown } from 'react-icons/md'
-import { FiltersContainer, Label } from './styled'
+import { MdKeyboardArrowDown, MdOutlineClose } from 'react-icons/md'
+import { FiltersContainer, Label, MobileHeader } from './styled'
+import { useState } from 'react'
+import { useWindowSize } from 'react-use'
 
 interface FiltersProps {
   search: () => void
@@ -19,21 +21,28 @@ export function Filters({
   setSelectedLanguageFilter,
 }: FiltersProps) {
 
+  const [modalOpenType, setModalOpenType] = useState(false)
+  const [modalOpenLanguage, setModalOpenLanguage] = useState(false)
+  const { width } = useWindowSize()
 
   function handleChangeTypeFilter(type: string) {
     setSelectedTypeFilter(type)
+    setModalOpenType(false)
+    setModalOpenLanguage(false)
     search();
   }
 
   function handleChangeLanguageFilter(language: string) {
     setSelectedLanguageFilter(language)
+    setModalOpenType(false)
+    setModalOpenLanguage(false)
     search();
   }
 
   return (
     <FiltersContainer>
-      <Popover.Root>
-        <Popover.Trigger className="PopoverTrigger">
+      <Popover.Root open={modalOpenType} onOpenChange={setModalOpenType} >
+        <Popover.Trigger  className="PopoverTrigger">
           <FilterButton width="105px">
             <MdKeyboardArrowDown size={28} />
             Type
@@ -41,6 +50,12 @@ export function Filters({
         </Popover.Trigger>
         <Popover.Portal>
           <Popover.Content className="PopoverContent" sideOffset={5}>
+            {width <= 400 && (
+            <MobileHeader>
+              <Text size={24} weight={700}>Type</Text>
+              <MdOutlineClose color='#FE354D' size={20} onClick={() => setModalOpenType(false)} />
+            </MobileHeader>
+            )}
             <Label>
               <input
                 type="checkbox"
@@ -90,7 +105,7 @@ export function Filters({
         </Popover.Portal>
       </Popover.Root>
 
-      <Popover.Root>
+      <Popover.Root open={modalOpenLanguage} onOpenChange={setModalOpenLanguage} >
         <Popover.Trigger className="PopoverTrigger">
           <FilterButton width="145px">
             <MdKeyboardArrowDown size={28} />
@@ -98,7 +113,15 @@ export function Filters({
           </FilterButton>
         </Popover.Trigger>
         <Popover.Portal>
-          <Popover.Content className="PopoverContent" sideOffset={5}>
+          <Popover.Content className="PopoverContent language" sideOffset={5}>
+              
+            {width <= 400 && (
+              <MobileHeader>
+                <Text size={24} weight={700}>Language</Text>
+                <MdOutlineClose color='#FE354D' size={20} onClick={() => setModalOpenLanguage(false)} />
+              </MobileHeader>
+            )}
+
             <Label>
               <input
                 type="checkbox"

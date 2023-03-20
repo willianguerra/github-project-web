@@ -14,3 +14,12 @@ export const Label = styled.label`
   gap: 0.7em;
   margin-bottom: 24px;
 `
+
+
+export const MobileHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 24px 8px 40px;
+`

@@ -88,6 +88,22 @@ export const GlobalStyle = createGlobalStyle`
     z-index: 99;
     border-radius: 8px;
     box-shadow: 0px 0px 16px rgba(79, 79, 80, 0.15);
+
+    
+    @media (max-width: 400px) {
+      position: absolute;
+      width: 100vw;
+      transform: translate3d(-77px, -470px, 0px);
+      border-radius: 0px;
+      height: 100vh;
+      background: var(--white);
+      padding: 24px;
+
+      &.language {
+      transform: translate3d(-205px, -470px, 0px);
+
+      }
+    }
   }
 
   .PopoverContent:focus {
