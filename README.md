@@ -1,6 +1,4 @@
-## Teste para vaga de front-end no Magazord.com.br
-
-Este repositório tem como fim testar os candidatos para vaga de front-end developer na empresa Magazord.
+## Github Project 
 
 ## Instalação
 
